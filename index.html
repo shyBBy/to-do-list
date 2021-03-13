@@ -28,9 +28,6 @@
             <li class="nav-item border" style="margin:10px">
               <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Login/Register</a>
             </li>
-            <li class="nav-item border show" id="btnAddNewTask" style="margin:10px">
-                <a class="nav-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Add new task</a>
-            </li>
           </ul>
         </div>
 
@@ -66,10 +63,50 @@
 
 <!-- LOGIN/REG END -->
 
+<!-- CONTENT START -->
+<div id="content" class="container border border-3 show" style="padding: 20px; margin-top: 50px;">
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Author</th>
+          <th scope="col">Content</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody id="listTaskContainer">
+        <!-- <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio ducimus explicabo magni, nostrum itaque nemo non est reiciendis nulla dolores facilis amet distinctio, voluptatem illo libero</td>
+          <td><span class="badge rounded-pill bg-danger">HIGH</span></td>
+          <td><span class="badge bg-primary">NEW</span></td>
+        </tr> -->
+        <!-- <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio ducimus explicabo magni, nostrum itaque nemo non est.</td>
+          <td><span class="badge rounded-pill bg-danger">HIGH</span></td>
+          <td><span class="badge bg-secondary">IN PROGRESS</span></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Victor</td>
+          <td>Lorem ipsum dolor sit amet consectetur ad.</td>
+          <td><span class="badge rounded-pill bg-secondary">NORMAL</span></td>
+          <td><span class="badge bg-success">DONE</span></td>
+        </tr> -->
+      </tbody>
+    </table>
+</div>
+
+<!-- CONTENT END -->
+
 <!-- ADD NEW START -->
-<div class="container">
-            <div class="collapse" id="collapseExample">
-                <div class="container border border-3" style="padding: 20px;">
+<div id="AddNewTask" class="container show">
+            <!-- <div class="collapse" id="collapseExample"> -->
+                <div class="container border border-3" style="padding: 20px; margin-top: 50px;">
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="card" style="margin-bottom: 30px;">
@@ -81,72 +118,33 @@
                     </div>
                     <span class="lead">Logged as:</span>
                     <div class="form-floating" style="margin-bottom: 20px; margin-top: 10px;">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Content</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="newTaskContent" style="height: 100px"></textarea>
+                        <label for="newTaskContent">Content</label>
                     </div>
                     <div style="margin-bottom: 10px;">
                         <span class="lead">Set piority:</span>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="pioritiNormal">
+                        <label class="form-check-label" for="pioritiNormal">
                           Normal
                         </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="pioritiHigh" checked>
+                        <label class="form-check-label" for="pioritiHigh">
                           High
                         </label>
                       </div>
-                      <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Add</button>
+                      <button type="submit" class="btn btn-primary" style="margin-top: 15px;" id="btnAddNewTask" >Add</button>
                 </div>
             
-            </div>
+            <!-- </div> -->
 </div>
 
 
 <!-- ADD NEW END -->
 
-<!-- CONTENT START -->
-<div id="content" class="container border border-3 show" style="padding: 20px; margin-top: 50px;">
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Author</th>
-            <th scope="col">Content</th>
-            <th scope="col">Priority</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio ducimus explicabo magni, nostrum itaque nemo non est reiciendis nulla dolores facilis amet distinctio, voluptatem illo libero</td>
-            <td><span class="badge rounded-pill bg-danger">HIGH</span></td>
-            <td><span class="badge bg-primary">NEW</span></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio ducimus explicabo magni, nostrum itaque nemo non est.</td>
-            <td><span class="badge rounded-pill bg-danger">HIGH</span></td>
-            <td><span class="badge bg-secondary">IN PROGRESS</span></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Victor</td>
-            <td>Lorem ipsum dolor sit amet consectetur ad.</td>
-            <td><span class="badge rounded-pill bg-secondary">NORMAL</span></td>
-            <td><span class="badge bg-success">DONE</span></td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-
-<!-- CONTENT END -->
 <script src="main.js"></script>
 </body>
 </html>
